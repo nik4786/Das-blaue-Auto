@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.10.0)
 
-project(template_filter)
+project(SignalReceiver)
 
-include_directories(${OpenCV_INCLUDE_DIRS})
+# include_directories(${OpenCV_INCLUDE_DIRS})
 
-set (SOURCEFILES    	stdafx.h 
-						TemplateFilter.h
-						TemplateFilter.cpp)
+set (SOURCEFILES    	../../../description/aadc.description
+			Template.h
+			Template.cpp )
 
 adtf_add_filter(${PROJECT_NAME}
 				${SOURCEFILES}

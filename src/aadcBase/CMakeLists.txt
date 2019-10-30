@@ -32,6 +32,10 @@ else(AADC_FOUND)
    message(FATAL_ERROR "-- AADC not found")
 endif (AADC_FOUND)
 
+#EDIT Florian Braun
+SET(ADTF_DIR /opt/adtf/)
+#ENDEDIT
+
 find_package(ADTF 3.3.0 REQUIRED)
 message(STATUS "Found ADTF: ${ADTF_VERSION}")
 

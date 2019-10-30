@@ -1,4 +1,4 @@
-add_subdirectory(FisheyeUndistortion)
+# add_subdirectory(FisheyeUndistortion)
 add_subdirectory(ConverterWheels)
 add_subdirectory(Calibration)
 add_subdirectory(CalibrationXML)

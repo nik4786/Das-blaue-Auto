@@ -16,7 +16,7 @@ THIS SOFTWARE IS PROVIDED BY AUDI AG AND CONTRIBUTORS AS IS AND ANY EXPRESS OR I
 #pragma once
 
 #include "stdafx.h"
-#include "aadc_structs.h"
+//#include "aadc_structs.h"
 
 #define CID_ADTF_SENSOR_VISUALIZATION  "sensor_visualization.filter.demo.aadc.cid"
 #define LABEL_ADTF_SENSOR_VISUALIZATION  "Sensor Visualization"

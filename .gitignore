@@ -1,4 +1,7 @@
 _build_user
 _build_base
 _build_demo
+_build*
 /_install
+src/aadcBase
+src/aadcDemo
