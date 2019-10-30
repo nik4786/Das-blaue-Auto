@@ -49,4 +49,6 @@ include_directories(${CMAKE_INSTALL_INCLUDE})
 #add_subdirectory(playground)
 
 add_subdirectory(ArduinoSignalConverter)
+add_subdirectory(MovingAvgFilter)
+#add_subdirectory(UltrasonicFilter)
 

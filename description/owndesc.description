@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="no"?>
+<adtf:ddl xmlns:adtf="adtf">
+ <header>
+  <language_version>3.00</language_version>
+  <author>AADC2017</author>
+  <date_creation>04.07.2014</date_creation>
+  <date_change>29.05.2018</date_change>
+  <description>AADC Common Description File</description>
+ </header>
+ <structs>
+  <struct alignment="1" name="tGaussianVariable" version="1">
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="0" name="mean" type="tFloat32" />
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="4" name="stddev" type="tFloat32" />
+  </struct>
+</structs>
+</adtf:ddl>
