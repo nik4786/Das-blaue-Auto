@@ -1,5 +1,0 @@
-add_subdirectory(BaslerCamera)
-add_subdirectory(CameraCalibration)
-add_subdirectory(LaserScanner)
-add_subdirectory(UniversalCamera)
-add_subdirectory(Microphone)

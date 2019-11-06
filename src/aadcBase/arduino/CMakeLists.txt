@@ -1,6 +1,0 @@
-add_subdirectory(ArduinoUSSensor)
-add_subdirectory(ArduinoEgoMotionSensor)
-add_subdirectory(ArduinoBatterySensor)
-add_subdirectory(ArduinoActuator)
-
-
