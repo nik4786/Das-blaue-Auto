@@ -44,6 +44,9 @@ include_directories(${AADC_DIR}/include)
 include_directories(${CMAKE_INSTALL_INCLUDE})
 
 
+
+add_subdirectory(ObjectDetectionYolo)
+
 #add_subdirectory(OpenCVTemplate)
 #add_subdirectory(TemplateFilter)
 #add_subdirectory(playground)
