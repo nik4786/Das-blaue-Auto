@@ -46,6 +46,7 @@ include_directories(${CMAKE_INSTALL_INCLUDE})
 
 
 add_subdirectory(ObjectDetectionYolo)
+add_subdirectory(ObjectLocalizationCamera)
 
 #add_subdirectory(OpenCVTemplate)
 #add_subdirectory(TemplateFilter)

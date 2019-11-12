@@ -1,5 +1,7 @@
 #include "ObjectDetect.h"
 
+ADTF_PLUGIN("Object Detection",YOLODetector);
+
 YOLODetector::YOLODetector()
 {
     // konstruktor

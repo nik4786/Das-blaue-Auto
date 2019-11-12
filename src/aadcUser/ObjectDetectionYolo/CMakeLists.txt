@@ -7,8 +7,6 @@ adtf_add_filter(${PROJECT_NAME}
 ../owndesc.description
     ObjectDetect.cpp
     ObjectDetect.h
-    ObjectLocalizer.h
-    ObjectLocalizer.cpp
 )
 
 target_link_libraries(${PROJECT_NAME} PUBLIC ${OpenCV_LIBS} )
