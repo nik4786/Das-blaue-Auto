@@ -17,6 +17,7 @@
    <element alignment="1" arraysize="1" byteorder="LE" bytepos="4" name="object_detected" type="tBool" />
    <element alignment="1" arraysize="1" byteorder="LE" bytepos="5" name="measurement" type="tGaussianVariable" />
   </struct>
+
   <struct alignment="1" name="tDetectedObject" version="1">
    <element alignment="1" arraysize="20" byteorder="LE" bytepos="0" name="className" type="tChar" />
    <element alignment="1" arraysize="1" byteorder="LE" bytepos="21" name="prob" type="tFloat32" />
@@ -28,6 +29,27 @@
   <struct alignment="1" name="tObjectDetectionResult" version="1">
    <element alignment="1" arraysize="1" byteorder="LE" bytepos="0" name="numResults" type="tUInt8" />
    <element alignment="1" arraysize="20" byteorder="LE" bytepos="4" name="objectsDetected" type="tDetectedObject" />
+  </struct>
+
+  <struct alignment="1" name="tObjectListPhys" version="1">
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="0" name="numResults" type="tUInt8" />
+   <element alignment="1" arraysize="20" byteorder="LE" bytepos="4" name="objectsDetected" type="tDetectedObject" />
+  </struct>
+  <struct alignment="1" name="tObjectPhys" version="1">
+   <element alignment="1" arraysize="20" byteorder="LE" bytepos="0" name="className" type="tChar" />
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="21" name="classificationProb" type="tFloat32" />
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="25" name="pose" type="tObjectPose" />
+   <element alignment="1" arraysize="20" byteorder="LE" bytepos="37" name="dimensions" type="tObjectDimensions" />
+  </struct>
+  <struct alignment="1" name="tObjectDimensions" version="1"> <!--  Size: 12 bytes  -->
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="0" name="width" type="tFloat32" />
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="4" name="height" type="tFloat32" />
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="8" name="length" type="tFloat32" />
+  </struct>
+  <struct alignment="1" name="tObjectPose" version="1"> <!--  Size: 12 bytes  -->
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="0" name="x" type="tFloat32" />
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="4" name="y" type="tFloat32" />
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="8" name="thetaZ" type="tFloat32" />
   </struct>
 </structs>
 </adtf:ddl>
