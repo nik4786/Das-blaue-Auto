@@ -35,11 +35,11 @@
    <element alignment="1" arraysize="1" byteorder="LE" bytepos="0" name="numResults" type="tUInt8" />
    <element alignment="1" arraysize="20" byteorder="LE" bytepos="1" name="objects" type="tObjectPhys" />
   </struct>
-  <struct alignment="1" name="tObjectPhys" version="1">
+  <struct alignment="1" name="tObjectPhys" version="1"> <!--  Size: 48 bytes  -->
    <element alignment="1" arraysize="20" byteorder="LE" bytepos="0" name="className" type="tChar" />
    <element alignment="1" arraysize="1" byteorder="LE" bytepos="20" name="classificationProb" type="tFloat32" />
    <element alignment="1" arraysize="1" byteorder="LE" bytepos="24" name="pose" type="tObjectPose" />
-   <element alignment="1" arraysize="20" byteorder="LE" bytepos="36" name="dimensions" type="tObjectDimensions" />
+   <element alignment="1" arraysize="1" byteorder="LE" bytepos="36" name="dimensions" type="tObjectDimensions" />
   </struct>
   <struct alignment="1" name="tObjectDimensions" version="1"> <!--  Size: 12 bytes  -->
    <element alignment="1" arraysize="1" byteorder="LE" bytepos="0" name="width" type="tFloat32" />
