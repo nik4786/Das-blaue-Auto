@@ -35,8 +35,8 @@ tResult PID_Controller::ProcessInput(ISampleReader* pReader)
     // calculating dt for I-Component
     m_currentTime = GetTime();
     tFloat64 dt = (m_currentTime - m_LastUpdateTime);
-    if (std::abs(dt)>1)
-        dt = 0;
+    //if (std::abs(dt)>1)
+    //    dt = 0; 							wieso wirds hier immer auf 0 gesetzt wenn >1 ?
     m_LastUpdateTime = m_currentTime;
 
     // calculating error out of required target_value and actual measured_value
@@ -51,7 +51,10 @@ tResult PID_Controller::ProcessInput(ISampleReader* pReader)
         m_accumulatedError = m_PIDMinimumOutput;
 
     // PID-Controller
-    m_PIDResult = (m_PIDKp * m_error) + (m_PIDKi * m_accumulatedError) + (m_PIDKd * (m_error-m_erroralt)/dt); 
+    if (dt > 0) 
+		m_PIDResult = (m_PIDKp * m_error) + (m_PIDKi * m_accumulatedError) + (m_PIDKd * (m_error-m_erroralt)/dt);
+	else	// catch exception (for example in first run) (/0 -> NaN)
+		m_PIDResult = (m_PIDKp * m_error) + (m_PIDKi * m_accumulatedError);
 
     m_erroralt = m_error;
 

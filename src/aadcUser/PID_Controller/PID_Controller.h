@@ -34,11 +34,11 @@ class PID_Controller : public cFilter
         tFloat64 m_error = 0;
         tFloat64 target_value;
         tFloat64 measured_value;
-        property_variable<tFloat64> m_PIDKp = 0;
-        property_variable<tFloat64> m_PIDKi = 0;
+        property_variable<tFloat64> m_PIDKp = 1;
+        property_variable<tFloat64> m_PIDKi = 0.1;
         property_variable<tFloat64> m_PIDKd = 0;
-        property_variable<tFloat64> m_PIDMinimumOutput = 0;
-        property_variable<tFloat64> m_PIDMaximumOutput = 0;
+        property_variable<tFloat64> m_PIDMinimumOutput = -100;
+        property_variable<tFloat64> m_PIDMaximumOutput = 100;
         //property_variable<tFloat64> m_AWUMaxDiffSum = 0; see .cpp
         ISampleWriter* output_writer = nullptr;
         ISampleReader* input_reader1 = nullptr;
