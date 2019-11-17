@@ -1,6 +1,13 @@
 project(object_detection_yolo)    
 
+SET(DARKNET_ROOT "/home/aadc/darknet-cpp-master/")
+SET(darknet_cpp_SOURCE_DIR "/home/aadc/darknet-cpp-master/darknet_cpp/" )
+
 include_directories( ${OpenCV_INCLUDE_DIRS} )
+include_directories ("${DARKNET_ROOT}/include")
+include_directories (${CUDA_INCLUDE_DIRS})
+include_directories (${darknet_cpp_SOURCE_DIR}/src)
+link_directories (${darknet_cpp_SOURCE_DIR}/src)
 
 adtf_add_filter(${PROJECT_NAME}
     stdafx.h
@@ -9,7 +16,9 @@ adtf_add_filter(${PROJECT_NAME}
     ObjectDetect.h
 )
 
-target_link_libraries(${PROJECT_NAME} PUBLIC ${OpenCV_LIBS} )
+target_link_libraries(${PROJECT_NAME} PUBLIC ${OpenCV_LIBS}
+/home/aadc/darknet-cpp-master/libdarknet.a
+/usr/local/lib/libdarknet_cpp.so )
 
 adtf_install_plugin(${PROJECT_NAME} bin)
 

@@ -4,6 +4,7 @@
 #include <adtffiltersdk/adtf_filtersdk.h>
 #include <algorithm>
 #include <owndesc.h>
+#include <darknet.hpp>
 
 
 using namespace adtf::base;
@@ -24,15 +25,53 @@ using namespace std;
 struct detection_result
 {
 	Rect bbox;
+	uint16_t center_x, center_y;
+	uint16_t lblIndex;
 	string className;
 	float confidence;
 
-	detection_result(Rect _bbox,string _classname,float _confidence)
+	detection_result(Rect _bbox, uint16_t _center_x, uint16_t _center_y ,string _classname,uint16_t _lblIndex, float _confidence)
 	{
 		bbox = _bbox;
+		center_x = _center_x;
+		center_y = _center_y;
+		lblIndex = _lblIndex;
 		className=_classname;
 		confidence=_confidence;
 	}
+
+	detection_result(Darknet::Detection dnDetection)
+	{
+		center_x = dnDetection.x;
+		center_y = dnDetection.y;
+		bbox = Rect(center_x-dnDetection.width/2,
+					center_y-dnDetection.height/2,
+					dnDetection.width,
+					dnDetection.height);
+		lblIndex = dnDetection.label_index;
+		className = dnDetection.label;
+		confidence = dnDetection.probability;
+	}
+
+	operator Darknet::Detection() const
+	{
+		return Darknet::Detection {
+			static_cast<float>(center_x),
+			static_cast<float>(center_y),
+			static_cast<float>(bbox.width),
+			static_cast<float>(bbox.height),
+			confidence,
+			lblIndex,
+			className
+		};
+	}
+};
+
+enum object_detection_target : int
+{
+	TARGET_CPU = 0,
+	TARGET_OpenCL = 1,
+	TARGET_GPU = 2
 };
 
 class YOLODetector : public cFilter
@@ -77,10 +116,17 @@ class YOLODetector : public cFilter
 	property_variable<tInt> m_inpHeight = 416;
 	property_variable<cString> m_relevantClasses = cString("");
 	// Misc settings
-	property_variable<tBool> m_bOpenCL = tTrue;	
+	
+	property_variable<object_detection_target> m_target = TARGET_CPU;
+	// property_variable<tBool> m_bDarknet = false;	
 	property_variable<tBool> m_renderResults = false;
 	
 
+
+	Darknet::Image dnimage;
+    Darknet::ConvertCvBgr8 converter;
+    Darknet::Detector detector;
+    std::vector<Darknet::Detection> detections;
 
 	Net m_oNet; // the neural net
 	vector<string> classes;
@@ -88,10 +134,12 @@ class YOLODetector : public cFilter
 	vector<string> relevantClasses;
 	tNanoSeconds m_last_inference = tNanoSeconds(0);
 
-	adtf::streaming::tStreamImageFormat m_sCurrentFormat;
-
+	void initPropertyVariables();
+	tResult processOpenCV(Mat& image, vector<detection_result>& detections);
+	tResult processDarknet(Mat& image, vector<detection_result>& detections);
 	vector<detection_result> processDetections(const Mat& frame, const vector<Mat>& out);
 	tResult output_detections(vector<detection_result>& detections, tNanoSeconds tm);
+	void output_detections_image(Mat& image, vector<detection_result>& detections, tNanoSeconds tm);
 	// Draw the predicted bounding box
 	void drawPreds(vector<detection_result>& detections, Mat& frame);
 	// Get the names of the output layers
