@@ -53,17 +53,18 @@ tResult cObjectLocalizerCamera::ProcessInput(ISampleReader* pReader, const iobje
 
 void cObjectLocalizerCamera::processForFrontCamera(uint16_t x,uint16_t y,tObjectPose& result)
 {
-    result.x = 57.82/(y-473.9); // calculate the x-coordinate in the sensor frame by the y-coordinate of the bbox in the image
+    // calculate the x-coordinate in the sensor frame by the y-coordinate of the bbox in the image
+    result.x = (57.82) / (y - 473.9)*(1-(624-x)/424)+ (50.44) / (y - 476.3)*((624-x)/465); 
 
     // catch the case that the fit function is only valid for x<=625
-    float angle = 1;
+    double angle = 1;
     if(x>625)
     {
         x = 1250-x;
         angle = -1;
     }
 
-    angle *= tan((-0.0002*x*x + 0.0185*x + 62.301)*DEG2RAD);
+    angle *= tan(-0.00000337*x*x + 0.0003849*x + 1.071); //fit in rad
 
     result.y = result.x / angle;
 }
