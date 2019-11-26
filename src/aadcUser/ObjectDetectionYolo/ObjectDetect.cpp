@@ -356,7 +356,7 @@ tResult YOLODetector::processDarknet(Mat& image, vector<detection_result>& detec
 
     for(auto d : dnDetections)
     {
-        if(relevantClasses.empty() || std::find(relevantClasses.begin(), relevantClasses.end(), classes[classIdPoint.x]) != relevantClasses.end())
+        if(relevantClasses.empty() || std::find(relevantClasses.begin(), relevantClasses.end(), d.label) != relevantClasses.end())
         {
             detections.push_back(detection_result(d));
         }
