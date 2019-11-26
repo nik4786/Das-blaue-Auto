@@ -1,4 +1,13 @@
 #pragma once
+/**
+ * @file ObjectDetect.h
+ *
+ * @brief Header file for the YOLO object detector
+ * *
+ * @author Florian Braun
+ * Contact: flb8127@thi.de
+ *
+ */
 
 #include "stdafx.h"
 #include <adtffiltersdk/adtf_filtersdk.h>

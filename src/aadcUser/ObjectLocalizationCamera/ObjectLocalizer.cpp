@@ -1,3 +1,12 @@
+/**
+ * @file ObjectLocalizer.cpp
+ *
+ * @brief Implementation of the camera-based object localizer 
+ * *
+ * @author Florian Braun
+ * Contact: flb8127@thi.de
+ *
+ */
 #include "ObjectLocalizer.h"
 
 ADTF_PLUGIN("Object Localizer",cObjectLocalizerCamera);

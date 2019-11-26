@@ -1,4 +1,14 @@
 #pragma once
+/**
+ * @file ObjectLocalizer.h
+ *
+ * @brief Header of the camera-based object localizer 
+ * *
+ * @author Florian Braun
+ * Contact: flb8127@thi.de
+ *
+ */
+
 
 #include <adtffiltersdk/adtf_filtersdk.h>
 #include <owndesc.h>

@@ -1,3 +1,13 @@
+/**
+ * @file ObjectDetect.cpp
+ *
+ * @brief Implementation of the YOLO Object detector
+ * *
+ * @author Florian Braun
+ * Contact: flb8127@thi.de
+ *
+ */
+
 #include "ObjectDetect.h"
 #include <easy/profiler.h>
 
