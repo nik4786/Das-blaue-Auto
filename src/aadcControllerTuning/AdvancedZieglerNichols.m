@@ -9,8 +9,9 @@ function [ControllerParameter] = AdvancedZieglerNichols(n)
 
 %% import csv-file
 
-[file,~] = uigetfile('*.csv'); 
-csvfile = importdata(file);
+[file,path] = uigetfile('*.csv'); 
+csvfile = importdata(fullfile(path,file));
+
 
 %% User Input to specify Controller Type (P, PI, PID) and Signalname
 

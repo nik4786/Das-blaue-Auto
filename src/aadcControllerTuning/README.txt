@@ -17,7 +17,6 @@ With this tool, it should be possible to tune a arbitrary controller (P, PI, PID
 
 At first, it is necessary to record a step response in adtf. Probably, a adtfdat-file is generated. To use MATLAB, a conversion of the adftdat-file into a csv-file is needed. The easiest way for doing this is to use the adtf-dattool with the corresponding csv-processor to convert into csv.
 After converting, the step response have to be cut to a range, in which only the step response is mapped. 
-Finally, all files (m-function, csv-files) have to be put into the same folder.
 
 
 4 APPLICATION
