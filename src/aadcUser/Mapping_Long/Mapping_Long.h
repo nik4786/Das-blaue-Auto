@@ -2,7 +2,7 @@
 #pragma once
 
 //*************************************************************************************************
-#define PID_CONTROLLER_ID "PID_Controller.demo.thi.de"
+#define MAPPING_LONG_ID "Mapping_Long.demo.thi.de"
 #include "stdafx.h"
 #include <adtffiltersdk/adtf_filtersdk.h>
 #include <adtffiltersdk/filter.h>
@@ -18,37 +18,27 @@ using namespace adtf::filter;
 using namespace adtf::mediadescription;
 //using namespace adtf::services::ant;
 
-class PID_Controller : public cFilter
+class Mapping_Long : public cFilter
 {
     public:
-        ADTF_CLASS_ID_NAME(PID_Controller,PID_CONTROLLER_ID,"PID_Controller");
+        ADTF_CLASS_ID_NAME(Mapping_Long ,MAPPING_LONG_ID,"Mapping Long");
         
 	// Constructor
-        PID_Controller();
+        Mapping_Long();
 	
-	//Processing, if input receives signal
+	//Processing
         tResult ProcessInput(tNanoSeconds tmTrigger, ISampleReader* pReader);
         
         //virtual tTimeStamp GetTime();
 
     private:
+        
 	// Declaration of variables
-        tFloat64 m_erroralt = 0;
-        tFloat64 m_accumulatedError = 0;
-        tFloat64 m_error = 0;
-        tFloat64 target_value;
-        tFloat64 measured_value;
-        tFloat64 m_PIDResult = 0;
-        clock_t m_currentTime = 0;
-        clock_t m_LastUpdateTime = 0;
-	
-	// Declaration of property variables
-        property_variable<tFloat64> m_PIDKp = 1;
-        property_variable<tFloat64> m_PIDKi = 0.1;
-        property_variable<tFloat64> m_PIDKd = 0;
-        property_variable<tFloat64> m_PIDMinimumOutput = -100;
-        property_variable<tFloat64> m_PIDMaximumOutput = 100;
-        //property_variable<tFloat64> m_AWUMaxDiffSum = 0; see .cpp
+        tFloat64 m_controlled_speed = 0;
+        tFloat64 desired_speed_percent = 0;
+        tFloat64 input_pid = 0;
+        tFloat64 m_MinimumOutput = -100;
+        tFloat64 m_MaximumOutput = 100;
 	
 	// Declaration of Writer and Readers
         ISampleWriter* output_writer = nullptr;
