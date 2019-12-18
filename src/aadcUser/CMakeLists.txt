@@ -46,6 +46,9 @@ include_directories(${CMAKE_INSTALL_INCLUDE})
 
 
 add_subdirectory(ObjectDetectionYolo)
+add_subdirectory(PID_Controller)
+add_subdirectory(TestLongLat)
+add_subdirectory(Mapping_Long)
 
 #add_subdirectory(OpenCVTemplate)
 #add_subdirectory(TemplateFilter)
