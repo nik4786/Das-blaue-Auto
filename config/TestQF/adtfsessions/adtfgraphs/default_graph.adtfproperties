@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<property_file xmlns="adtf/xsd/properties">
+  <file_version>
+    <major>1</major>
+    <minor>0</minor>
+  </file_version>
+  <property_packages>
+    <property_package>
+      <name>default</name>
+      <property_sets>
+        <property_set>
+          <name>graphs/default_filter_graph</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>streaming_graphs/default_streaming_graph</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>streaming_graphs/default_streaming_graph/streaminggraphdock/Filter Graph Dock</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/input_data_ports/LaneIn</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/input_data_ports/SpeedIn</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/PredictQF</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/TraceCalQF</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/TraceClassQF</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/sample_streams/Sample Stream</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/sample_streams/Sample Stream_1</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/LaneIn._Sample Stream.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/Sample Stream._TraceCalQF.LaneInput</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/Sample Stream_1._PredictQF.Speed</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/SpeedIn._Sample Stream_1.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/Sample Stream._PredictQF.LaneInput</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/Sample Stream._PredictQF.PrevLaneInput</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/Sample Stream._TraceClassQF.LaneInput</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/sample_streams/Sample Stream_2</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/TraceCalQF.SollPos_Sample Stream_2.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/Sample Stream_2._TraceClassQF.SollPos</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/output_data_ports/CurveClass</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/sample_streams/Sample Stream_3</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/TraceClassQF.TraceClass_Sample Stream_3.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/Sample Stream_3._CurveClass.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/output_data_ports/SollPos</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/output_data_ports/IstPos</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/Sample Stream_2._SollPos.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/sample_streams/Sample Stream_4</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/Sample Stream_4._IstPos.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/connections/PredictQF.IstPos_Sample Stream_4.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/subgraphs/AADC_Functions</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/sample_streams/Sample Stream</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/sample_streams/Sample Stream_1</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/sample_streams/Sample Stream_2</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/sample_streams/Sample Stream_3</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/filters/LenkwinkelMapping</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/filters/PID_Controller</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/connections/Sample Stream_3._LenkwinkelMapping.PID_Result</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/connections/LenkwinkelMapping.Lenkwinkel_Sample Stream_2.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/connections/Sample Stream._PID_Controller.measured_value</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/connections/Sample Stream_1._PID_Controller.target_value</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/connections/PID_Controller.controlled_value_Sample Stream_3.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/input_data_ports/SollIn</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/connections/SollIn._Sample Stream_1.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/input_data_ports/IstIn</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/connections/IstIn._Sample Stream.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/output_data_ports/Steering</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/connections/Sample Stream_2._Steering.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/subgraphs/LateralControl</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/connections/AADC_Functions.SollPos_LateralControl.SollIn</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/connections/AADC_Functions.IstPos_LateralControl.IstIn</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/streaming_out_ports/Steering2Arduino</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/TraceCalQF/input_pins/LaneInput</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/PredictQF/input_pins/LaneInput</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/PredictQF/input_pins/PrevLaneInput</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/PredictQF/input_pins/Speed</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/TraceClassQF/input_pins/LaneInput</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/TraceCalQF/output_pins/SollPos</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/TraceClassQF/input_pins/SollPos</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/TraceClassQF/output_pins/TraceClass</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/AADC_Functions/filters/PredictQF/output_pins/IstPos</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/filters/LenkwinkelMapping/input_pins/PID_Result</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/filters/LenkwinkelMapping/output_pins/Lenkwinkel</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/filters/PID_Controller/input_pins/measured_value</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/filters/PID_Controller/input_pins/target_value</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/LateralControl/filters/PID_Controller/output_pins/controlled_value</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/sample_streams/Sample Stream</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/connections/LateralControl.Steering_Sample Stream.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/connections/Sample Stream._Steering2Arduino.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/output_data_ports/openforotherfcnt</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/connections/AADC_Functions.CurveClass_openforotherfcnt.</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/streaming_in_ports/Arduino2FilterSpeed</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/connections/Arduino2FilterSpeed._AADC_Functions.SpeedIn</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/input_data_ports/InputfromLaneDetection</name>
+          <properties/>
+        </property_set>
+        <property_set>
+          <name>graphs/default_filter_graph/connections/InputfromLaneDetection._AADC_Functions.LaneIn</name>
+          <properties/>
+        </property_set>
+      </property_sets>
+    </property_package>
+  </property_packages>
+</property_file>
